@@ -3,158 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lido Development - IT Investment Company</title>
+    <title>Civisto Portfolio</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <nav class="nav">
-            <div class="nav-container">
-                <div class="logo">
-                    <h1>Lido Development</h1>
-                </div>
-                <div class="nav-menu">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                    <a href="#contact" class="nav-link">Contact</a>
-                </div>
-            </div>
-        </nav>
-    </header>
-
-    <!-- Hero Section -->
-    <section class="hero">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title">Investing in the Future of IT Development</h1>
-                <p class="hero-subtitle">We partner with innovative IT development companies to accelerate growth and technological advancement.</p>
-                <p class="hero-cta">Reach out and our team will make your goal our goals</p>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Get Started</a>
-                    <a href="#portfolio" class="btn btn-secondary">View Portfolio</a>
-                </div>
+    <div class="portfolio-card civisto-card">
+        <div class="civisto-hero">
+            <div class="civisto-branding">
+                <h1 class="civisto-logo">CIVISTO</h1>
+                <p class="civisto-tagline">En app för alla 290 svenska kommuner</p>
             </div>
         </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">About Lido Development</h2>
-                <p class="section-subtitle">Strategic investment in IT innovation</p>
+        <div class="civisto-content">
+            <section class="civisto-value-prop">
+                <h2>Your Value Proposition Here</h2>
+                <p>Describe the value proposition of your portfolio.</p>
+            </section>
+            <div class="civisto-features">
+                <div class="feature">Smart Geo-fencing</div>
+                <div class="feature">Real-time Reporting</div>
+                <div class="feature">Municipal Integration</div>
             </div>
-            <div class="about-grid">
-                <div class="about-card">
-                    <div class="about-icon">💡</div>
-                    <h3>Innovation Focus</h3>
-                    <p>We identify and invest in cutting-edge IT development companies that are shaping the future of technology.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">🤝</div>
-                    <h3>Strategic Partnership</h3>
-                    <p>Beyond capital, we provide strategic guidance and industry expertise to accelerate company growth.</p>
-                </div>
-                <div class="about-card">
-                    <div class="about-icon">🚀</div>
-                    <h3>Growth Acceleration</h3>
-                    <p>Our investment approach focuses on scaling innovative solutions and expanding market reach.</p>
-                </div>
+            <div class="civisto-cta">
+                <button onclick="window.location.href='https://www.civisto.com'">Visit Civisto</button>
             </div>
         </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2 class="section-title">Our Portfolio</h2>
-                <p class="section-subtitle">Companies we're proud to support</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-card featured">
-                    <div class="portfolio-content">
-                        <h3 class="portfolio-title">Civisto</h3>
-                        <p class="portfolio-description">Spot it. Snap it. Solve it.</p><br>
-<p>CIVISTO gives you the power to fix your community issues in minutes, not months. One simple app connects you to all 290 Swedish municipalities.</p>
-                        <a href="https://civisto.com" target="_blank" class="portfolio-link">Visit Civisto →</a>
-                    </div>
-                    <div class="portfolio-image">
-                        <div class="portfolio-placeholder">CIVISTO</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-grid">
-                <div class="contact-info">
-                    <h2 class="section-title">Let's Connect</h2>
-                    <p class="contact-subtitle">Ready to discuss your next big idea? We're here to help turn your vision into reality.</p>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div class="contact-details">
-                            <h4>Email</h4>
-                            <a href="mailto:johan.lido@gmail.com">johan.lido@gmail.com</a>
-                        </div>
-                    </div>
-                    
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div class="contact-details">
-                            <h4>Phone</h4>
-                            <a href="tel:+46705569337">+46(0)70-5569337</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="contact-form">
-                    <form class="form">
-                        <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Message</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Lido Development. All rights reserved.</p>
-                </div>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+    </div>
 </body>
 </html>
