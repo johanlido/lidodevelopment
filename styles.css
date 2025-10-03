@@ -25,6 +25,7 @@ body {
     line-height: 1.6;
     color: var(--dark);
     background-color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
 .container {
@@ -265,6 +266,7 @@ a:hover {
     border-radius: 16px;
     overflow: hidden;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .civisto-header {
@@ -305,6 +307,8 @@ a:hover {
     max-width: 280px;
     border-radius: 20px;
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    height: auto;
 }
 
 .civisto-info {
@@ -366,6 +370,7 @@ a:hover {
 .feature-icon {
     font-size: 2rem;
     margin-right: 1.5rem;
+    flex-shrink: 0;
 }
 
 .civisto-comparison {
@@ -471,6 +476,7 @@ a:hover {
 .contact-icon {
     font-size: 1.5rem;
     margin-right: 1rem;
+    flex-shrink: 0;
 }
 
 .contact-item h4 {
@@ -561,6 +567,7 @@ a:hover {
     
     .civisto-app {
         padding: 2rem;
+        order: -1; /* Move app screenshot to the top on tablet */
     }
     
     .app-screenshot {
@@ -615,6 +622,19 @@ a:hover {
     .footer-links {
         justify-content: center;
     }
+    
+    .civisto-header h3 {
+        font-size: 2.8rem;
+    }
+    
+    .feature {
+        padding: 1.2rem;
+    }
+    
+    .feature-icon {
+        font-size: 1.8rem;
+        margin-right: 1rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -631,10 +651,56 @@ a:hover {
     }
     
     .civisto-stats {
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+    }
+    
+    .stat {
+        padding: 1rem 0.5rem;
+    }
+    
+    .stat-number {
+        font-size: 1.8rem;
+    }
+    
+    .stat-label {
+        font-size: 0.8rem;
     }
     
     .civisto-header h3 {
         font-size: 2.5rem;
+    }
+    
+    .civisto-header p {
+        font-size: 1.1rem;
+    }
+    
+    .civisto-info {
+        padding: 2rem 1.5rem;
+    }
+    
+    .civisto-app {
+        padding: 2rem 1rem;
+    }
+    
+    .app-screenshot {
+        max-width: 200px;
+    }
+    
+    .feature {
+        flex-direction: column;
+    }
+    
+    .feature-icon {
+        margin-bottom: 1rem;
+        margin-right: 0;
+    }
+    
+    .process-step {
+        padding-left: 50px;
+    }
+    
+    .container {
+        padding: 0 15px;
     }
 }
