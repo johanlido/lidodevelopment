@@ -1,39 +1,54 @@
-// Smooth scrolling for navigation links
 document.addEventListener('DOMContentLoaded', function() {
-    // Handle navigation clicks
+    // Smooth scrolling for navigation links
     const navLinks = document.querySelectorAll('.nav-link, .btn[href^="#"]');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
             e.preventDefault();
+            
             const targetId = this.getAttribute('href');
             const targetElement = document.querySelector(targetId);
             
             if (targetElement) {
-                const offsetTop = targetElement.offsetTop - 80; // Account for fixed header
+                const headerHeight = document.querySelector('.header').offsetHeight;
+                const targetPosition = targetElement.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+                
                 window.scrollTo({
-                    top: offsetTop,
+                    top: targetPosition,
                     behavior: 'smooth'
                 });
             }
         });
     });
-
-    // Form submission handling
-    const contactForm = document.querySelector('.form');
+    
+    // Header scroll effect
+    const header = document.querySelector('.header');
+    
+    window.addEventListener('scroll', function() {
+        if (window.scrollY > 50) {
+            header.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.1)';
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.98)';
+        } else {
+            header.style.boxShadow = '0 1px 3px rgba(0, 0, 0, 0.1)';
+            header.style.backgroundColor = 'rgba(255, 255, 255, 0.95)';
+        }
+    });
+    
+    // Form submission
+    const contactForm = document.getElementById('contactForm');
+    
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
             e.preventDefault();
             
             // Get form data
-            const formData = new FormData(this);
-            const name = formData.get('name');
-            const email = formData.get('email');
-            const company = formData.get('company');
-            const message = formData.get('message');
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const company = document.getElementById('company').value;
+            const message = document.getElementById('message').value;
             
-            // Create mailto link with form data
-            const subject = encodeURIComponent(`Investment Inquiry from ${name}${company ? ' (' + company + ')' : ''}`);
+            // Create mailto link
+            const subject = encodeURIComponent(`Project Inquiry from ${name}${company ? ' (' + company + ')' : ''}`);
             const body = encodeURIComponent(`
 Name: ${name}
 Email: ${email}
@@ -42,7 +57,7 @@ Message:
 ${message}
 
 ---
-Sent from Lido Development website
+Sent from Lidodevelopment website
             `);
             
             const mailtoLink = `mailto:johan.lido@gmail.com?subject=${subject}&body=${body}`;
@@ -52,51 +67,63 @@ Sent from Lido Development website
             showSuccessMessage();
         });
     }
-
-    // Header scroll effect
-    window.addEventListener('scroll', function() {
-        const header = document.querySelector('.header');
-        if (window.scrollY > 100) {
-            header.style.background = 'rgba(255, 255, 255, 0.98)';
-        } else {
-            header.style.background = 'rgba(255, 255, 255, 0.95)';
-        }
-    });
-
-    // Animate elements on scroll
+    
+    // Animate stats numbers
+    const statNumbers = document.querySelectorAll('.stat-number');
+    
+    function animateStats() {
+        statNumbers.forEach(stat => {
+            const finalValue = parseInt(stat.textContent.replace(/,/g, ''));
+            
+            if (!isNaN(finalValue)) {
+                let startValue = 0;
+                const duration = 2000;
+                const increment = Math.ceil(finalValue / (duration / 16));
+                
+                const counter = setInterval(() => {
+                    startValue += increment;
+                    
+                    if (startValue >= finalValue) {
+                        stat.textContent = finalValue.toLocaleString();
+                        clearInterval(counter);
+                    } else {
+                        stat.textContent = startValue.toLocaleString();
+                    }
+                }, 16);
+            }
+        });
+    }
+    
+    // Intersection Observer for animations
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
     };
-
+    
     const observer = new IntersectionObserver(function(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
+                if (entry.target.classList.contains('civisto-stats')) {
+                    animateStats();
+                } else {
+                    entry.target.classList.add('animate');
+                }
+                observer.unobserve(entry.target);
             }
         });
     }, observerOptions);
-
+    
     // Observe elements for animation
-    const animateElements = document.querySelectorAll('.about-card, .portfolio-card, .contact-item');
+    const animateElements = document.querySelectorAll('.card, .process-step, .civisto-stats, .feature');
+    
     animateElements.forEach(el => {
-        el.style.opacity = '0';
-        el.style.transform = 'translateY(20px)';
-        el.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
         observer.observe(el);
     });
 });
 
 // Success message function
 function showSuccessMessage() {
-    // Remove any existing success message
-    const existingMessage = document.querySelector('.success-message');
-    if (existingMessage) {
-        existingMessage.remove();
-    }
-
-    // Create and show success message
+    // Create success message element
     const successMessage = document.createElement('div');
     successMessage.className = 'success-message';
     successMessage.innerHTML = `
@@ -105,7 +132,7 @@ function showSuccessMessage() {
             top: 100px;
             left: 50%;
             transform: translateX(-50%);
-            background: #48bb78;
+            background: #2a9d8f;
             color: white;
             padding: 1rem 2rem;
             border-radius: 8px;
@@ -113,31 +140,14 @@ function showSuccessMessage() {
             z-index: 1001;
             font-weight: 500;
         ">
-            ✅ Thank you! Your message has been prepared. Your email client should open now.
+            ✅ Thank you! Your message has been sent.
         </div>
     `;
     
     document.body.appendChild(successMessage);
     
-    // Remove message after 5 seconds
+    // Remove after 5 seconds
     setTimeout(() => {
-        if (successMessage.parentNode) {
-            successMessage.remove();
-        }
+        successMessage.remove();
     }, 5000);
 }
-
-// Add some interactive effects
-document.addEventListener('DOMContentLoaded', function() {
-    // Add hover effect to portfolio card
-    const portfolioCard = document.querySelector('.portfolio-card');
-    if (portfolioCard) {
-        portfolioCard.addEventListener('mouseenter', function() {
-            this.style.boxShadow = '0 20px 40px rgba(0, 0, 0, 0.15)';
-        });
-        
-        portfolioCard.addEventListener('mouseleave', function() {
-            this.style.boxShadow = '0 10px 25px rgba(0, 0, 0, 0.1)';
-        });
-    }
-});
