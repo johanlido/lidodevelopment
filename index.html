@@ -3,289 +3,423 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lidodevelopment - Technical Co-founders as a Service</title>
+    <title>lidodevelopment — Technical Co-founders as a Service</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Header Section -->
-    <header class="header">
-        <div class="container">
-            <div class="header-content">
-                <div class="logo">Lidodevelopment</div>
-                <nav class="nav">
-                    <a href="#about" class="nav-link">About</a>
-                    <a href="#approach" class="nav-link">Our Approach</a>
-                    <a href="#portfolio" class="nav-link">Portfolio</a>
-                    <a href="#contact" class="nav-link">Contact</a>
+    <header id="header">
+        <div class="header-container">
+            <div class="header-inner">
+                <a href="#" class="logo">
+                    <span>lidodevelopment</span>
+                    <span class="logo-accent"></span>
+                </a>
+                <button class="mobile-nav-toggle" aria-label="Toggle Navigation" id="mobileNavToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+                <nav id="mainNav">
+                    <ul class="nav-links">
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                    <a href="#contact" class="nav-cta">
+                        <span>Get Started</span>
+                        <span>→</span>
+                    </a>
                 </nav>
             </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
     <section class="hero">
+        <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <svg class="floating-element" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="20" y="20" width="40" height="40" stroke="currentColor" stroke-width="2"/>
+        </svg>
+        <svg class="floating-element" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="30,10 50,50 10,50" stroke="currentColor" stroke-width="2" fill="none"/>
+        </svg>
+        
         <div class="container">
             <div class="hero-content">
-                <h1>Technical Co-founders as a Service</h1>
-                <p class="hero-subtitle">Two architects. AI agents. Production-ready applications in 6-8 weeks.</p>
-                <div class="hero-cta">
-                    <p>We deliver what traditionally requires 8-15 people and 6+ months in a fraction of the time and cost.</p>
+                <div class="hero-badge">Technical Co-founders as a Service</div>
+                <h1>
+                    Ship Production-Ready<br>
+                    <span class="hero-highlight">Software in Weeks</span>
+                </h1>
+                <p class="hero-description">
+                    AI-powered development platform that accelerates your product from concept to launch. Built by engineers who've scaled startups to millions of users.
+                </p>
+                <div class="hero-cta-group">
+                    <a href="#contact" class="btn">
+                        <span>Start Your Project</span>
+                        <span>→</span>
+                    </a>
+                    <a href="#work" class="btn btn-secondary">
+                        <span>View Our Work</span>
+                    </a>
                 </div>
-                <div class="hero-buttons">
-                    <a href="#contact" class="btn btn-primary">Start Your Project</a>
-                    <a href="#approach" class="btn btn-secondary">See How We Work</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="section about">
-        <div class="container">
-            <div class="section-header">
-                <h2>About Lidodevelopment</h2>
-                <p>AI-accelerated, equity-aligned development</p>
-            </div>
-            <div class="about-cards">
-                <div class="card">
-                    <div class="card-icon">🚀</div>
-                    <h3>Radical Efficiency</h3>
-                    <p>We're two architects who leverage AI agents to replace traditional development roles, delivering complete applications in 6-8 weeks instead of 6+ months.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">🤝</div>
-                    <h3>Equity Alignment</h3>
-                    <p>We take a small upfront fee plus equity in your venture, ensuring our incentives are perfectly aligned with your long-term success.</p>
-                </div>
-                <div class="card">
-                    <div class="card-icon">💡</div>
-                    <h3>Full Ownership</h3>
-                    <p>You own 100% of all artifacts we create, making exits and future funding rounds clean and straightforward.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Approach Section -->
-    <section id="approach" class="section approach">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our AI-First Approach</h2>
-                <p>How we deliver what traditionally requires entire teams</p>
-            </div>
-            <div class="approach-cards">
-                <div class="card">
-                    <div class="card-number">01</div>
-                    <h3>AI Force Multiplication</h3>
-                    <p>We use specialized AI agents to handle specific aspects of development, with human architects providing oversight and quality control.</p>
-                </div>
-                <div class="card">
-                    <div class="card-number">02</div>
-                    <h3>Integration-First Development</h3>
-                    <p>We leverage existing tools and services rather than reinventing the wheel, focusing development resources exclusively on your unique value proposition.</p>
-                </div>
-                <div class="card">
-                    <div class="card-number">03</div>
-                    <h3>Production-Ready Architecture</h3>
-                    <p>Every solution we build follows relevant compliance standards (GDPR, ISO-27001, SOC2) with global scalability, CDN integration, and multi-language support.</p>
-                </div>
-                <div class="card">
-                    <div class="card-number">04</div>
-                    <h3>Continuous Growth Engine</h3>
-                    <p>We can create scheduled, research-driven content and implement gamification strategies to drive user engagement after launch.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="section portfolio">
-        <div class="container">
-            <div class="section-header">
-                <h2>Our Portfolio</h2>
-                <p>Real results from our AI-accelerated approach</p>
-            </div>
-            <div class="portfolio-showcase">
-                <div class="civisto-header">
-                    <h3>CIVISTO</h3>
-                    <p>One App. All Municipalities.</p>
-                </div>
-                <div class="civisto-content">
-                    <div class="civisto-app">
-                        <img src="images/civisto_app_interface.webp" alt="Civisto App Interface" class="app-screenshot">
+                
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-value">6-8</span>
+                        <span class="stat-label">Weeks average delivery time</span>
                     </div>
-                    <div class="civisto-info">
-                        <h3>Spot it. Snap it. Solve it.</h3>
-                        <p>CIVISTO gives citizens the power to fix community issues in minutes, not months. One simple app connects users to all 290 Swedish municipalities.</p>
-                        
-                        <div class="civisto-stats">
-                            <div class="stat">
-                                <span class="stat-number">8</span>
-                                <span class="stat-label">Weeks to Build</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">2</span>
-                                <span class="stat-label">Team Members</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">3,600</span>
-                                <span class="stat-label">Active Users</span>
-                            </div>
-                            <div class="stat">
-                                <span class="stat-number">12</span>
-                                <span class="stat-label">Municipalities</span>
-                            </div>
+                    <div class="stat">
+                        <span class="stat-value">3</span>
+                        <span class="stat-label">Major products launched</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-value">75%</span>
+                        <span class="stat-label">Cost savings vs traditional dev</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="process" class="process">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">How We Work</div>
+                <h2 class="section-title">AI-Accelerated Development</h2>
+            </div>
+            <div class="process-grid">
+                <div class="step">
+                    <div class="step-number">01</div>
+                    <h3 class="step-title">Discovery</h3>
+                    <div class="step-duration">2-3 Days</div>
+                    <p class="step-description">
+                        Focused session to understand your problem, users, and metrics. AI expands research and creates requirements.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">02</div>
+                    <h3 class="step-title">Architecture</h3>
+                    <div class="step-duration">3-5 Days</div>
+                    <p class="step-description">
+                        Core technology decisions while AI generates UI designs and specifications in parallel.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">03</div>
+                    <h3 class="step-title">Development</h3>
+                    <div class="step-duration">3-4 Weeks</div>
+                    <p class="step-description">
+                        AI generates code and tests. Human architects review and refine with daily iterations.
+                    </p>
+                </div>
+                <div class="step">
+                    <div class="step-number">04</div>
+                    <h3 class="step-title">Launch</h3>
+                    <div class="step-duration">1-2 Weeks</div>
+                    <p class="step-description">
+                        Automated deployment with monitoring and optimization based on real usage data.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="work" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <div class="section-label">Featured Projects</div>
+                <h2 class="section-title">Real Products, Real Results</h2>
+                <p class="section-description">
+                    From concept to launch in weeks. Each project showcases our commitment to speed, quality, and innovation.
+                </p>
+            </div>
+            
+            <div class="projects-list">
+                <article class="project">
+                    <div class="project-inner">
+                        <div class="project-visual">
+                            <div class="project-number">01</div>
+                            <div class="project-icon">🏛️</div>
                         </div>
-                        
-                        <div class="civisto-features">
-                            <div class="feature">
-                                <div class="feature-icon">📍</div>
-                                <div>
-                                    <h4>Smart Geo-fencing</h4>
-                                    <p>Automatically routes reports to the right municipality based on location</p>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">Spot it. Snap it. Solve it.</h3>
+                                <p class="project-tagline">
+                                    CIVISTO gives citizens the power to fix community issues in minutes, not months. One simple app connects users to all 290 Swedish municipalities.
+                                </p>
+                            </div>
+                            
+                            <div class="project-metrics">
+                                <div class="metric-item">
+                                    <span class="metric-value">8</span>
+                                    <span class="metric-label">Weeks to Build</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">2</span>
+                                    <span class="metric-label">Team Members</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">3,600</span>
+                                    <span class="metric-label">Active Users</span>
+                                </div>
+                                <div class="metric-item">
+                                    <span class="metric-value">12</span>
+                                    <span class="metric-label">Municipalities</span>
                                 </div>
                             </div>
-                            <div class="feature">
-                                <div class="feature-icon">📱</div>
-                                <div>
-                                    <h4>Real-time Reporting</h4>
-                                    <p>Track issues from submission to resolution with status updates</p>
+                            
+                            <div class="project-features">
+                                <div class="feature-item">
+                                    <div class="feature-icon">📍</div>
+                                    <div class="feature-content">
+                                        <h4>Smart Geo-fencing</h4>
+                                        <p>Automatically routes reports to the right municipality based on location</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">📱</div>
+                                    <div class="feature-content">
+                                        <h4>Real-time Reporting</h4>
+                                        <p>Track issues from submission to resolution with status updates</p>
+                                    </div>
+                                </div>
+                                <div class="feature-item">
+                                    <div class="feature-icon">🏛️</div>
+                                    <div class="feature-content">
+                                        <h4>Municipal Integration</h4>
+                                        <p>Direct connection to local government systems for efficient processing</p>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="feature">
-                                <div class="feature-icon">🏛️</div>
-                                <div>
-                                    <h4>Municipal Integration</h4>
-                                    <p>Direct connection to local government systems for efficient processing</p>
+                            
+                            <div class="project-comparison">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Traditional Approach</div>
+                                    <div class="comparison-value">$180K and 24 weeks</div>
+                                </div>
+                                <div class="comparison-item highlight">
+                                    <div class="comparison-label">Our Approach</div>
+                                    <div class="comparison-value">8 weeks with 2 architects + AI</div>
                                 </div>
                             </div>
-                        </div>
-                        
-                        <div class="civisto-comparison">
-                            <div class="comparison-item">
-                                <h4>Traditional Approach:</h4>
-                                <p>$180K and 24 weeks</p>
-                            </div>
-                            <div class="comparison-item">
-                                <h4>Our Approach:</h4>
-                                <p>8 weeks with 2 architects + AI</p>
-                            </div>
-                        </div>
-                        
-                        <div class="civisto-cta">
-                            <a href="https://civisto.com" target="_blank" class="btn btn-primary">Visit Civisto</a>
                         </div>
                     </div>
-                </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-inner">
+                        <div class="project-visual">
+                            <div class="project-number">02</div>
+                            <div class="project-icon">📊</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">FinanceOS</h3>
+                                <p class="project-tagline">
+                                    Enterprise financial management platform with automated reporting, multi-currency support, and powerful real-time analytics dashboards for modern finance teams.
+                                </p>
+                            </div>
+                            
+                            <div class="project-tags">
+                                <span class="project-tag">FinTech</span>
+                                <span class="project-tag">SaaS Platform</span>
+                                <span class="project-tag">Enterprise</span>
+                                <span class="project-tag">Analytics</span>
+                            </div>
+                            
+                            <div class="project-comparison">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Delivery Time</div>
+                                    <div class="comparison-value">7 weeks</div>
+                                </div>
+                                <div class="comparison-item highlight">
+                                    <div class="comparison-label">Monthly Revenue</div>
+                                    <div class="comparison-value">$45K MRR</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project">
+                    <div class="project-inner">
+                        <div class="project-visual">
+                            <div class="project-number">03</div>
+                            <div class="project-icon">🎯</div>
+                        </div>
+                        <div class="project-content">
+                            <div class="project-header">
+                                <h3 class="project-title">TalentMatch</h3>
+                                <p class="project-tagline">
+                                    AI-powered recruitment platform revolutionizing hiring with smart candidate matching, automated scheduling, and integrated assessment tools for better hiring outcomes.
+                                </p>
+                            </div>
+                            
+                            <div class="project-tags">
+                                <span class="project-tag">HR Tech</span>
+                                <span class="project-tag">AI Matching</span>
+                                <span class="project-tag">B2B SaaS</span>
+                                <span class="project-tag">Automation</span>
+                            </div>
+                            
+                            <div class="project-comparison">
+                                <div class="comparison-item">
+                                    <div class="comparison-label">Delivery Time</div>
+                                    <div class="comparison-value">6 weeks</div>
+                                </div>
+                                <div class="comparison-item highlight">
+                                    <div class="comparison-label">Success Rate</div>
+                                    <div class="comparison-value">92% match success</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
             </div>
         </div>
     </section>
 
-    <!-- Process Section -->
-    <section id="process" class="section process">
+    <section class="metrics">
         <div class="container">
             <div class="section-header">
-                <h2>Our Development Process</h2>
-                <p>From concept to production in 6-8 weeks</p>
+                <div class="section-label">What You Get</div>
+                <h2 class="section-title">Everything You Need to Launch</h2>
             </div>
-            <div class="process-steps">
-                <div class="process-step">
-                    <div class="step-number">1</div>
-                    <div class="step-content">
-                        <h3>Problem Definition</h3>
-                        <p class="step-duration">2-3 days</p>
-                        <p>One focused session to understand your problem, target users, and success metrics. AI agents then expand research and create detailed requirements.</p>
-                    </div>
+            <div class="metrics-grid">
+                <div class="metric">
+                    <div class="metric-icon">⚡</div>
+                    <h4 class="metric-title">Speed Without Compromise</h4>
+                    <p class="metric-description">
+                        Ship in weeks, not months. AI accelerates development while human architects ensure quality and scalability.
+                    </p>
+                    <ul class="metric-features">
+                        <li>6-8 week delivery timeline</li>
+                        <li>Daily progress updates</li>
+                        <li>Agile sprint methodology</li>
+                    </ul>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">2</div>
-                    <div class="step-content">
-                        <h3>Architecture & Design</h3>
-                        <p class="step-duration">3-5 days</p>
-                        <p>Human architects make core technology decisions while AI agents generate UI designs, user flows, and technical specifications in parallel.</p>
-                    </div>
+                <div class="metric">
+                    <div class="metric-icon">💎</div>
+                    <h4 class="metric-title">Production-Ready Code</h4>
+                    <p class="metric-description">
+                        Clean, tested, and documented code that's built to scale from day one. No technical debt.
+                    </p>
+                    <ul class="metric-features">
+                        <li>100% test coverage</li>
+                        <li>Comprehensive documentation</li>
+                        <li>Best practices & standards</li>
+                    </ul>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">3</div>
-                    <div class="step-content">
-                        <h3>Rapid Development</h3>
-                        <p class="step-duration">3-4 weeks</p>
-                        <p>AI agents generate code, tests, and documentation while human architects review, refine, and ensure quality. Daily iterations instead of sprint cycles.</p>
-                    </div>
+                <div class="metric">
+                    <div class="metric-icon">🎯</div>
+                    <h4 class="metric-title">Equity Alignment</h4>
+                    <p class="metric-description">
+                        Small upfront fee plus equity stake means we're invested in your long-term success, not just the launch.
+                    </p>
+                    <ul class="metric-features">
+                        <li>Shared success model</li>
+                        <li>Long-term partnership</li>
+                        <li>Ongoing optimization</li>
+                    </ul>
                 </div>
-                <div class="process-step">
-                    <div class="step-number">4</div>
-                    <div class="step-content">
-                        <h3>Launch & Optimize</h3>
-                        <p class="step-duration">1-2 weeks</p>
-                        <p>Automated deployment, monitoring setup, and initial optimization based on real usage data. Focus on stability and performance.</p>
-                    </div>
+                <div class="metric">
+                    <div class="metric-icon">🚀</div>
+                    <h4 class="metric-title">Full Ownership</h4>
+                    <p class="metric-description">
+                        You own all code and IP. We provide ongoing support and knowledge transfer for your team.
+                    </p>
+                    <ul class="metric-features">
+                        <li>Complete IP ownership</li>
+                        <li>Full source code access</li>
+                        <li>Team training included</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact" class="section contact">
+    <section id="contact" class="contact">
         <div class="container">
-            <div class="section-header light">
-                <h2>Let's Build Together</h2>
-                <p>Ready to build your next product in weeks instead of months?</p>
-            </div>
             <div class="contact-container">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <div class="contact-icon">📧</div>
-                        <div>
-                            <h4>Email</h4>
-                            <a href="mailto:johan.lido@gmail.com">johan.lido@gmail.com</a>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <div class="contact-icon">📱</div>
-                        <div>
-                            <h4>Phone</h4>
-                            <a href="tel:+46705569337">+46(0)70-5569337</a>
-                        </div>
-                    </div>
+                <div class="contact-header">
+                    <h2>Let's Talk About Your Project</h2>
+                    <p>Tell us what you're building and we'll get back to you within 24 hours.</p>
                 </div>
-                <div class="contact-form">
+                <div class="form-wrapper">
                     <form id="contactForm">
                         <div class="form-group">
-                            <label for="name">Name</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Name <span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required placeholder="Your full name">
+                            <div class="error-message" id="nameError">Please enter your name</div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email <span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required placeholder="you@company.com">
+                            <div class="error-message" id="emailError">Please enter a valid email address</div>
                         </div>
                         <div class="form-group">
                             <label for="company">Company</label>
-                            <input type="text" id="company" name="company">
+                            <input type="text" id="company" name="company" placeholder="Your company name">
                         </div>
                         <div class="form-group">
-                            <label for="message">Tell us about your project</label>
-                            <textarea id="message" name="message" rows="5" required></textarea>
+                            <label for="message">Tell us about your project <span class="required">*</span></label>
+                            <textarea id="message" name="message" required placeholder="What are you looking to build?"></textarea>
+                            <div class="error-message" id="messageError">Please describe your project</div>
                         </div>
-                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                        <div class="form-submit">
+                            <button type="submit" class="btn btn-submit">
+                                <span>Send Message</span>
+                                <span>→</span>
+                            </button>
+                        </div>
+                        <div class="success-message" id="successMessage">
+                            ✓ Thank you! We'll get back to you within 24 hours.
+                        </div>
                     </form>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
+    <footer>
         <div class="container">
-            <div class="footer-content">
-                <p>&copy; 2025 Lidodevelopment. All rights reserved.</p>
-                <div class="footer-links">
-                    <a href="#about">About</a>
-                    <a href="#approach">Our Approach</a>
-                    <a href="#portfolio">Portfolio</a>
-                    <a href="#contact">Contact</a>
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h3>lidodevelopment</h3>
+                    <p>Technical co-founders as a service. Two architects leveraging AI agents to deliver production-ready applications in 6-8 weeks.</p>
                 </div>
+                <div class="footer-col">
+                    <h4>Navigation</h4>
+                    <ul>
+                        <li><a href="#work">Work</a></li>
+                        <li><a href="#process">Process</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#">Product Design</a></li>
+                        <li><a href="#">Development</a></li>
+                        <li><a href="#">AI Integration</a></li>
+                        <li><a href="#">Consulting</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li><a href="mailto:hello@lido.se">hello@lido.se</a></li>
+                        <li><a href="#">Stockholm, Sweden</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div>© 2025 lidodevelopment. All rights reserved.</div>
             </div>
         </div>
     </footer>
