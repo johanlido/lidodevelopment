@@ -548,12 +548,14 @@ nav {
 
 .project-visual {
     position: relative;
-    background: var(--gray-50);
+    background: linear-gradient(135deg, var(--gray-50) 0%, var(--gray-100) 100%);
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 3rem 2rem;
+    padding: 2rem;
     border-right: 1px solid rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    min-height: 420px;
 }
 
 .project-number {
@@ -572,11 +574,26 @@ nav {
     font-weight: 700;
     color: var(--white);
     box-shadow: 0 4px 12px rgba(0, 102, 255, 0.3);
+    z-index: 2;
 }
 
 .project-icon {
     font-size: 6rem;
     filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.1));
+}
+
+/* Project Image Styling */
+.project-image {
+    max-width: 95%;
+    max-height: 500px;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    object-position: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    display: block;
+    margin: 0 auto;
 }
 
 .project-content {
@@ -751,6 +768,39 @@ nav {
     background: rgba(0, 102, 255, 0.05);
     border-color: var(--blue);
     color: var(--blue);
+}
+
+/* Project Link Styling */
+.project-link {
+    margin-top: 1.5rem;
+    padding-top: 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.btn-project {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.875rem 1.75rem;
+    background: var(--blue);
+    color: var(--white);
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.9375rem;
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+    border: none;
+    cursor: pointer;
+}
+
+.btn-project:hover {
+    background: var(--blue-light);
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(51, 133, 255, 0.4);
+}
+
+.btn-project:active {
+    transform: translateY(0);
 }
 
 /* ============================================
@@ -1071,6 +1121,13 @@ footer {
     .project-metrics {
         grid-template-columns: repeat(2, 1fr);
     }
+    .project-visual {
+        min-height: 350px;
+        padding: 1.5rem;
+    }
+    .project-image {
+        max-height: 320px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1155,9 +1212,16 @@ footer {
         grid-template-columns: 1fr;
     }
     .project-visual {
-        padding: 2.5rem 2rem;
+        min-height: 250px;
+        padding: 1.5rem;
         border-right: none;
         border-bottom: 1px solid rgba(0, 0, 0, 0.06);
+    }
+    
+    .project-image {
+        max-height: 220px;
+        max-width: 85%;
+        width: auto;
     }
     .project-icon {
         font-size: 5rem;
@@ -1171,6 +1235,10 @@ footer {
     }
     .project-comparison {
         grid-template-columns: 1fr;
+    }
+    .btn-project {
+        width: 100%;
+        justify-content: center;
     }
     .metrics-grid {
         grid-template-columns: 1fr;
@@ -1207,7 +1275,7 @@ footer {
     .projects, .process, .contact, .metrics {
         padding: 2rem 0;
     }
-    .btn, .btn-submit, .btn-secondary {
+    .btn, .btn-submit, .btn-secondary, .btn-project {
         font-size: 0.9375rem;
         padding: 0.875rem 1.5rem;
     }
@@ -1221,7 +1289,14 @@ footer {
         font-size: 2.25rem;
     }
     .project-visual {
-        padding: 2rem 1.5rem;
+        min-height: 200px;
+        padding: 1rem;
+    }
+    
+    .project-image {
+        max-height: 180px;
+        max-width: 80%;
+        width: auto;
     }
     .project-icon {
         font-size: 4.5rem;
