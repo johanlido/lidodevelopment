@@ -1,452 +1,386 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>lidodevelopment – Technical Co-founders as a Service</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lido Development — CTO as a Service</title>
+<meta name="description" content="Lido Development is technical leadership on demand. Fractional CTO, architecture, delivery and AI enablement for founders and scale-ups who need to ship." />
+<meta name="theme-color" content="#0E0E0E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Lido Development — CTO as a Service" />
+<meta property="og:description" content="Technical leadership on demand. Strategy, architecture and delivery from an operator who has shipped it before." />
+
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=switzer@400,500,600,700&display=swap" />
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23C6F24E'/%3E%3Cpath d='M9 7v18h13' stroke='%230E0E0E' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
 </head>
 <body>
-    <header id="header">
-        <div class="header-container">
-            <div class="header-inner">
-                <a href="#" class="logo">
-                    <span>lidodevelopment</span>
-                    <span class="logo-accent"></span>
-                </a>
-                <button class="mobile-nav-toggle" aria-label="Toggle Navigation" id="mobileNavToggle">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </button>
-                <nav id="mainNav">
-                    <ul class="nav-links">
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                    <a href="#contact" class="nav-cta">
-                        <span>Get Started</span>
-                        <span>→</span>
-                    </a>
-                </nav>
-            </div>
+
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<!-- ───────────────────────── NAV ───────────────────────── -->
+<header class="nav" id="nav">
+  <div class="nav__pill">
+    <a class="logo" href="#top" aria-label="Lido Development home">Lido<span>.</span></a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#process">How it works</a>
+      <a href="work.html">Work</a>
+      <a href="team.html">Team</a>
+      <a href="#services">Services <b>05</b></a>
+      <a href="#faq">FAQ</a>
+      <a href="#contact">Contact</a>
+    </nav>
+
+    <div class="nav__right">
+      <button class="toggle" id="theme" aria-label="Switch to light theme">
+        <svg class="toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <a class="pill" data-magnetic href="#start">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" inert>
+  <div class="drawer__top">
+    <a class="logo" href="#top" aria-label="Lido Development home">Lido<span>.</span></a>
+    <button class="drawer__close" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer__links" aria-label="Primary">
+    <a href="#process">How it works</a>
+    <a href="work.html">Work</a>
+    <a href="team.html">Team</a>
+    <a href="#services">Services</a>
+    <a href="#faq">FAQ</a>
+    <a href="#contact">Contact</a>
+    <a href="#start">Start a project</a>
+  </nav>
+  <div class="drawer__contact">
+    <p>Contact</p>
+    <a href="mailto:hello@lidodevelopment.com">hello@lidodevelopment.com</a>
+  </div>
+</div>
+
+<main id="main">
+
+<!-- ───────────────────────── HERO ───────────────────────── -->
+<section class="hero" id="top">
+  <div class="hero__copy">
+    <p class="eyebrow reveal"><i></i> Hiya, we're Lido <span aria-hidden="true">👋</span></p>
+
+    <h1 class="hero__title">
+      <span class="line"><span data-split>A fractional CTO</span></span>
+      <span class="line"><span data-split>practice for teams</span></span>
+      <span class="line"><span data-split>that need to ship</span></span>
+    </h1>
+
+    <div class="hero__actions reveal">
+      <a class="pill pill--dark" data-magnetic href="work.html">View our work <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+      <a class="link" href="#process">How it works <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M4 12 12 4M6 4h6v6"/></svg></a>
+    </div>
+  </div>
+
+  <div class="collage" aria-hidden="true">
+    <figure class="collage__photo" data-float="0.03">
+      <img src="assets/img/hero-room.jpg" alt="" width="1600" height="1067" fetchpriority="high" />
+    </figure>
+
+    <figure class="tile tile--shot" data-float="0.08">
+      <img src="assets/img/hero-side.jpg" alt="" width="900" height="600" />
+    </figure>
+
+    <article class="tile tile--dark" data-float="0.05">
+      <span class="chip chip--lime">Live</span>
+      <p class="tile__stat">9 days</p>
+      <p class="tile__sub">Average time to first production deploy</p>
+    </article>
+  </div>
+
+  </div>
+</section>
+
+<!-- ───────────────────────── MARQUEE ───────────────────────── -->
+<section class="marquee" id="clients" aria-labelledby="clients-label">
+  <h2 class="marquee__label" id="clients-label">Customers and clients</h2>
+  <div class="marquee__track">
+    <div class="marquee__set">
+      <span>Civisto</span><span>SEB</span><span>Lodexa</span><span>Insured</span>
+      <span>Civisto</span><span>SEB</span><span>Lodexa</span><span>Insured</span>
+    </div>
+    <div class="marquee__set" aria-hidden="true">
+      <span>Civisto</span><span>SEB</span><span>Lodexa</span><span>Insured</span>
+      <span>Civisto</span><span>SEB</span><span>Lodexa</span><span>Insured</span>
+    </div>
+  </div>
+</section>
+
+<!-- ───────────────────────── PROCESS ───────────────────────── -->
+<section class="section process" id="process">
+  <header class="process__head">
+    <p class="eyebrow reveal"><i></i> Simple steps</p>
+    <h2 class="h2 reveal">How it works</h2>
+    <p class="lede reveal">No decks that outlive the problem. Three stages, one goal: make the change stick to how your team actually works.</p>
+  </header>
+
+  <ol class="stages">
+    <li class="stage reveal">
+      <div class="stage__visual">
+        <img src="assets/img/hero-room.jpg" alt="" width="1600" height="1067" loading="lazy" />
+        <span class="stage__chip">Week 1–2</span>
+      </div>
+      <span class="stage__num">01</span>
+      <h3>Plan</h3>
+      <p>Two weeks inside the business — code, team, backlog, customers. You leave with a ranked risk register and a 90-day plan tied to commercial outcomes.</p>
+    </li>
+
+    <li class="stage reveal">
+      <div class="stage__visual">
+        <img src="assets/img/life-meet.jpg" alt="" width="1000" height="667" loading="lazy" />
+        <span class="stage__chip">With your team</span>
+      </div>
+      <span class="stage__num">02</span>
+      <h3>Architect &amp; build</h3>
+      <p>Systems designed for the load you'll actually have, one owner per service, then built with your team. Standards, CI and on-call ship as the product does.</p>
+    </li>
+
+    <li class="stage reveal">
+      <div class="stage__visual">
+        <img src="assets/img/life-3.jpg" alt="" width="800" height="1067" loading="lazy" />
+        <span class="stage__chip">Then we leave</span>
+      </div>
+      <span class="stage__num">03</span>
+      <h3>Deliver &amp; hand over</h3>
+      <p>Launch, then step back: the permanent lead hired and coached, systems documented, runbooks written. The exit is the deliverable.</p>
+    </li>
+  </ol>
+
+  <a class="pill process__cta" data-magnetic href="#start">Book the diagnostic <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+</section>
+
+<!-- ───────────────────────── WORK ───────────────────────── -->
+<section class="section work" id="work">
+  <header class="work__head">
+    <p class="eyebrow reveal"><i></i> Our work</p>
+    <h2 class="h2 reveal">Take a look at our projects</h2>
+  </header>
+
+  <div class="work__grid">
+    <a class="case reveal" href="work/cobalt.html">
+      <div class="case__visual">
+        <img src="assets/img/work-bank.jpg" alt="" width="1400" height="933" loading="lazy" />
+        <span class="case__metrics">
+          <span class="case__metric">website</span>
+          <span class="case__metric">branding</span>
+          <span class="case__metric">SEO</span>
+          <span class="case__metric">fullstack platform</span>
+        </span>
+        <span class="case__tag">View case ↗</span>
+      </div>
+      <p class="case__meta">2024 <i aria-hidden="true">•</i> Cobalt Bank</p>
+      <h3>Splitting a nine-year monolith into four owned services</h3>
+    </a>
+
+    <a class="case reveal" href="work/halcyon.html">
+      <div class="case__visual">
+        <img src="assets/img/work-health.jpg" alt="" width="1400" height="933" loading="lazy" />
+        <span class="case__metrics"><span class="case__metric">SOC 2 in 11 weeks</span></span>
+        <span class="case__tag">View case ↗</span>
+      </div>
+      <p class="case__meta">2025 <i aria-hidden="true">•</i> Halcyon Health</p>
+      <h3>SOC 2 in eleven weeks while doubling the engineering team</h3>
+    </a>
+
+    <a class="case reveal" href="work/orbital.html">
+      <div class="case__visual">
+        <img src="assets/img/work-freight.jpg" alt="" width="1400" height="933" loading="lazy" />
+        <span class="case__metrics"><span class="case__metric">£1.4m ops saved</span></span>
+        <span class="case__tag">View case ↗</span>
+      </div>
+      <p class="case__meta">2025 <i aria-hidden="true">•</i> Orbital Freight</p>
+      <h3>An evaluated LLM pipeline that removed £1.4m of ops cost</h3>
+    </a>
+
+    <a class="case reveal" href="work/verdex.html">
+      <div class="case__visual">
+        <img src="assets/img/work-board.jpg" alt="" width="1400" height="933" loading="lazy" />
+        <span class="case__metrics"><span class="case__metric">5-day diligence</span></span>
+        <span class="case__tag">View case ↗</span>
+      </div>
+      <p class="case__meta">2026 <i aria-hidden="true">•</i> Verdex</p>
+      <h3>Five-day diligence that reset a Series B valuation</h3>
+    </a>
+  </div>
+
+  <p class="work__all reveal"><a href="work.html">See all work</a></p>
+</section>
+
+<!-- ───────────────────────── SERVICES (big rows) ───────────────────────── -->
+<section class="section services" id="services">
+  <header class="services__head">
+    <p class="eyebrow reveal"><i></i> Our expertise</p>
+    <h2 class="h2 reveal">How we take your engineering to the next level</h2>
+    <div class="services__aside reveal">
+      <p>Five practices, one point of view. Brand, site, search, product and the leadership to hold them together.</p>
+      <a class="pill" data-magnetic href="#start">Book a diagnostic <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+    </div>
+  </header>
+
+  <ul class="rows">
+    <li class="row reveal">
+      <div class="row__inner">
+        <span class="row__num">01</span>
+        <h3>Branding</h3>
+        <p>Name, identity and a story that holds up in a pitch deck and in the product UI.</p>
+      </div>
+    </li>
+    <li class="row reveal">
+      <div class="row__inner">
+        <span class="row__num">02</span>
+        <h3>Websites</h3>
+        <p>Marketing sites that load fast, look like the product, and convert without a CMS circus.</p>
+      </div>
+    </li>
+    <li class="row reveal">
+      <div class="row__inner">
+        <span class="row__num">03</span>
+        <h3>SEO / AEO</h3>
+        <p>Found by search and by answers: technical SEO plus the structured content models actually cite.</p>
+      </div>
+    </li>
+    <li class="row reveal">
+      <div class="row__inner">
+        <span class="row__num">04</span>
+        <h3>Fullstack development</h3>
+        <p>Product, platform and the glue between them — shipped with your team, not a parallel bench.</p>
+      </div>
+    </li>
+    <li class="row reveal">
+      <div class="row__inner">
+        <span class="row__num">05</span>
+        <h3>CTO as a service</h3>
+        <p>Technical leadership on demand. The calls, the hiring, the architecture — then we leave.</p>
+      </div>
+    </li>
+  </ul>
+</section>
+
+<!-- ───────────────────────── ENQUIRY FORM ───────────────────────── -->
+<section class="section enquire" id="start">
+  <header class="enquire__head">
+    <p class="eyebrow reveal"><i></i> Start a project</p>
+    <h2 class="h2 reveal">Let's start at the very beginning</h2>
+    <p class="lede reveal">Tell us where it hurts — a stalled roadmap, a team that's outgrown its process, a diligence deadline. We reply within one working day.</p>
+  </header>
+
+  <form class="form reveal" id="enquiry" novalidate>
+    <div class="field">
+      <input id="f-name" name="name" type="text" placeholder=" " autocomplete="name" required />
+      <label for="f-name">Name</label>
+      <p class="field__err" id="e-name" role="alert"></p>
+    </div>
+
+    <div class="field">
+      <input id="f-email" name="email" type="email" placeholder=" " autocomplete="email" required />
+      <label for="f-email">Email</label>
+      <p class="field__err" id="e-email" role="alert"></p>
+    </div>
+
+    <div class="field">
+      <input id="f-company" name="company" type="text" placeholder=" " autocomplete="organization" required />
+      <label for="f-company">Company</label>
+      <p class="field__err" id="e-company" role="alert"></p>
+    </div>
+
+    <div class="field field--select">
+      <select id="f-topic" name="topic" required>
+        <option value="" selected disabled hidden></option>
+        <option value="branding">Branding</option>
+        <option value="websites">Websites</option>
+        <option value="seo">SEO / AEO</option>
+        <option value="fullstack">Fullstack development</option>
+        <option value="cto">CTO as a service</option>
+        <option value="other">Something else</option>
+      </select>
+      <label for="f-topic">What do you need?</label>
+      <svg class="field__chevron" viewBox="0 0 16 16" aria-hidden="true"><path d="m4 6 4 4 4-4"/></svg>
+      <p class="field__err" id="e-topic" role="alert"></p>
+    </div>
+
+    <div class="field field--area field--full">
+      <textarea id="f-project" name="project" rows="5" placeholder=" " required></textarea>
+      <label for="f-project">Tell us about your project</label>
+      <p class="field__err" id="e-project" role="alert"></p>
+    </div>
+
+    <button class="pill" type="submit" data-magnetic>Submit <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></button>
+  </form>
+
+  <p class="form__done" id="enquiry-done" role="status" hidden></p>
+</section>
+
+<!-- ───────────────────────── FAQ ───────────────────────── -->
+<section class="section faq" id="faq">
+  <div class="faq__head">
+    <p class="eyebrow reveal"><i></i> Questions</p>
+    <h2 class="h2 reveal">Before you ask</h2>
+  </div>
+
+  <div class="faq__list">
+    <details class="qa reveal"><summary>How is this different from an agency?<i aria-hidden="true"></i></summary><p>An agency sells you delivery capacity against a spec you wrote. We're accountable for whether the spec was right — the decisions, the hiring, the architecture and the number your board sees. When capacity is genuinely the gap, we'll tell you and help you buy it well.</p></details>
+    <details class="qa reveal"><summary>What if we already have engineers?<i aria-hidden="true"></i></summary><p>Most of our clients do. The gap is usually leadership, not hands. We work with the team you have, make the calls that were stuck, and coach the lead who eventually replaces us.</p></details>
+    <details class="qa reveal"><summary>How quickly can you start?<i aria-hidden="true"></i></summary><p>Diagnostics usually start within two weeks. We take a maximum of five concurrent clients so a principal is genuinely available, which means availability is limited and honest.</p></details>
+    <details class="qa reveal"><summary>Do you write code?<i aria-hidden="true"></i></summary><p>Yes — where it unblocks the team or sets a standard worth copying. We don't pretend to be a full delivery team on a Fractional CTO engagement; that's what Embedded is for.</p></details>
+    <details class="qa reveal"><summary>What happens at the end?<i aria-hidden="true"></i></summary><p>A permanent technical lead is hired and coached, the systems are documented, and we drop to a monthly advisory cadence. If we've done the job properly, you stop paying us.</p></details>
+  </div>
+</section>
+
+</main>
+
+<!-- ───────────────────────── FOOTER ───────────────────────── -->
+<footer class="footer" id="contact">
+  <div class="footer__panel">
+    <div class="footer__top">
+      <div class="footer__cta">
+        <h2>Do you like what you see?</h2>
+        <div class="footer__ctarow">
+          <a class="pill" data-magnetic href="mailto:hello@lidodevelopment.com">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+          <span class="rating rating--stack"><b>5.0</b> <i aria-hidden="true">★★★★★</i><br />from 31 engagements</span>
         </div>
-    </header>
+      </div>
 
-    <section class="hero">
-        <svg class="floating-element" width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <circle cx="50" cy="50" r="40" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <svg class="floating-element" width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect x="20" y="20" width="40" height="40" stroke="currentColor" stroke-width="2"/>
-        </svg>
-        <svg class="floating-element" width="60" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <polygon points="30,10 50,50 10,50" stroke="currentColor" stroke-width="2" fill="none"/>
-        </svg>
-        
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-badge">Technical Co-founders as a Service</div>
-                <h1>
-                    Ship Production-Ready<br>
-                    <span class="hero-highlight">Software in Weeks</span>
-                </h1>
-                <p class="hero-description">
-                    AI-powered development platform that accelerates your product from concept to launch. Built by engineers who've scaled startups to millions of users.
-                </p>
-                <div class="hero-cta-group">
-                    <a href="#contact" class="btn">
-                        <span>Start Your Project</span>
-                        <span>→</span>
-                    </a>
-                    <a href="#work" class="btn btn-secondary">
-                        <span>View Our Work</span>
-                    </a>
-                </div>
-                
-                <div class="hero-stats">
-                    <div class="stat">
-                        <span class="stat-value">6-8</span>
-                        <span class="stat-label">Weeks average delivery time</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">2</span>
-                        <span class="stat-label">Major products launched</span>
-                    </div>
-                    <div class="stat">
-                        <span class="stat-value">75%</span>
-                        <span class="stat-label">Cost savings vs traditional dev</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+      <nav class="footer__col" aria-label="Learn"><h4>Learn</h4><a href="#process">How it works</a><a href="#start">Start a project</a><a href="#faq">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Explore"><h4>Explore</h4><a href="#top">Home</a><a href="work.html">Work <b>new</b></a><a href="team.html">Team</a><a href="#services">Services</a><a href="#contact">Contact</a></nav>
 
-    <section id="process" class="process">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">How We Work</div>
-                <h2 class="section-title">AI-Accelerated Development</h2>
-            </div>
-            <div class="process-grid">
-                <div class="step">
-                    <div class="step-number">01</div>
-                    <h3 class="step-title">Discovery</h3>
-                    <div class="step-duration">2-3 Days</div>
-                    <p class="step-description">
-                        Focused session to understand your problem, users, and metrics. AI expands research and creates requirements.
-                    </p>
-                </div>
-                <div class="step">
-                    <div class="step-number">02</div>
-                    <h3 class="step-title">Architecture</h3>
-                    <div class="step-duration">3-5 Days</div>
-                    <p class="step-description">
-                        Core technology decisions while AI generates UI designs and specifications in parallel.
-                    </p>
-                </div>
-                <div class="step">
-                    <div class="step-number">03</div>
-                    <h3 class="step-title">Development</h3>
-                    <div class="step-duration">3-4 Weeks</div>
-                    <p class="step-description">
-                        AI generates code and tests. Human architects review and refine with daily iterations.
-                    </p>
-                </div>
-                <div class="step">
-                    <div class="step-number">04</div>
-                    <h3 class="step-title">Launch</h3>
-                    <div class="step-duration">1-2 Weeks</div>
-                    <p class="step-description">
-                        Automated deployment with monitoring and optimization based on real usage data.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
+      <div class="footer__col footer__contact">
+        <h4>Get in touch</h4>
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <a href="mailto:hello@lidodevelopment.com">hello@lidodevelopment.com</a>
+        <p>Lido Development Ltd<br />1 Waterhouse Square<br />London EC1N 2ST</p>
+      </div>
+    </div>
 
-    <section id="work" class="projects">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">Featured Projects</div>
-                <h2 class="section-title">Real Products, Real Results</h2>
-                <p class="section-description">
-                    From concept to launch in weeks. Each project showcases our commitment to speed, quality, and innovation.
-                </p>
-            </div>
-            
-            <div class="projects-list">
-                <article class="project">
-                    <div class="project-inner">
-                        <div class="project-visual">
-                            <div class="project-number">01</div>
-                            <img src="images/civisto_app_interface.webp" alt="CIVISTO App Preview" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Spot it. Snap it. Solve it.</h3>
-                                <p class="project-tagline">
-                                    CIVISTO gives citizens the power to fix community issues in minutes, not months. One simple app connects users to all 290 Swedish municipalities.
-                                </p>
-                            </div>
-                            
-                            <div class="project-metrics">
-                                <div class="metric-item">
-                                    <span class="metric-value">8</span>
-                                    <span class="metric-label">Weeks to Build</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">2</span>
-                                    <span class="metric-label">Team Members</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">+1000</span>
-                                    <span class="metric-label">Reports</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">290</span>
-                                    <span class="metric-label">Municipalities</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">📍</div>
-                                    <div class="feature-content">
-                                        <h4>Smart Geo-fencing</h4>
-                                        <p>Automatically routes reports to the right municipality based on location</p>
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">📱</div>
-                                    <div class="feature-content">
-                                        <h4>Real-time Reporting</h4>
-                                        <p>Track issues from submission to resolution with status updates</p>
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">🛠️</div>
-                                    <div class="feature-content">
-                                        <h4>Municipal Integration</h4>
-                                        <p>Direct connection to local government systems for efficient processing</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-comparison">
-                                <div class="comparison-item">
-                                    <div class="comparison-label">Traditional Approach</div>
-                                    <div class="comparison-value">$180K and 24 weeks</div>
-                                </div>
-                                <div class="comparison-item highlight">
-                                    <div class="comparison-label">Our Approach</div>
-                                    <div class="comparison-value">8 weeks with 2 architects + AI</div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-link">
-                                <a href="https://civisto.com" target="_blank" rel="noopener noreferrer" class="btn btn-project">
-                                    <span>Visit Civisto</span>
-                                    <span>↗</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
+    <div class="wordmark"><span>Shipping since 2016</span></div>
 
-                <article class="project">
-                    <div class="project-inner">
-                        <div class="project-visual">
-                            <div class="project-number">02</div>
-                            <img src="images/AMS.avif" alt="Asset Tracking Dashboard" class="project-image">
-                        </div>
-                        <div class="project-content">
-                            <div class="project-header">
-                                <h3 class="project-title">Asset Tracking Solutions</h3>
-                                <p class="project-tagline">
-                                    Advanced indoor and outdoor asset tracking systems using RFID, BLE beacons, LoRa, and GPS technology for real-time asset location, status monitoring, and comprehensive asset management. Deployed across 29 hospitals for critical equipment protection and patient safety.
-                                </p>
-                            </div>
-                            
-                            <div class="project-metrics">
-                                <div class="metric-item">
-                                    <span class="metric-value">29</span>
-                                    <span class="metric-label">Hospitals</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">24/7</span>
-                                    <span class="metric-label">Real-time Tracking</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">100%</span>
-                                    <span class="metric-label">Asset Visibility</span>
-                                </div>
-                                <div class="metric-item">
-                                    <span class="metric-value">7</span>
-                                    <span class="metric-label">Weeks to Deploy</span>
-                                </div>
-                            </div>
-                            
-                            <div class="project-features">
-                                <div class="feature-item">
-                                    <div class="feature-icon">📡</div>
-                                    <div class="feature-content">
-                                        <h4>RFID & BLE Technology</h4>
-                                        <p>High-precision indoor location tracking with sub-meter accuracy using BLE beacons and RFID tags</p>
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">🌐</div>
-                                    <div class="feature-content">
-                                        <h4>GPS & LoRa Integration</h4>
-                                        <p>Outdoor asset tracking with GPS/GNSS and long-range LoRa communication for wide-area coverage</p>
-                                    </div>
-                                </div>
-                                <div class="feature-item">
-                                    <div class="feature-icon">🏥</div>
-                                    <div class="feature-content">
-                                        <h4>Healthcare IoT Deployment</h4>
-                                        <p>Environmental monitoring for OT rooms, isolation areas, and medication storage with instant alerts</p>
-                                    </div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-tags">
-                                <span class="project-tag">RFID Tracking</span>
-                                <span class="project-tag">BLE Beacons</span>
-                                <span class="project-tag">LoRa Network</span>
-                                <span class="project-tag">GPS/GNSS</span>
-                                <span class="project-tag">Healthcare IoT</span>
-                            </div>
-                            
-                            <div class="project-comparison">
-                                <div class="comparison-item">
-                                    <div class="comparison-label">Network Scale</div>
-                                    <div class="comparison-value">29 hospitals deployed</div>
-                                </div>
-                                <div class="comparison-item highlight">
-                                    <div class="comparison-label">Technology Stack</div>
-                                    <div class="comparison-value">RFID + BLE + LoRa + GPS</div>
-                                </div>
-                            </div>
-                            
-                            <div class="project-link">
-                                <a href="https://www.amsolutions.my" target="_blank" rel="noopener noreferrer" class="btn btn-project">
-                                    <span>View AMS</span>
-                                    <span>↗</span>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
+    <div class="footer__bottom">
+      <span class="logo logo--sm">Lido<span>.</span></span>
+      <p>© 2026 Lido Development Ltd</p>
+      <p>Company Reg 10529058</p>
+      <p><a href="#top">Privacy</a> <a href="#top">Terms</a> <a href="#top">All rights reserved</a></p>
+    </div>
+  </div>
+</footer>
 
-    <section class="metrics">
-        <div class="container">
-            <div class="section-header">
-                <div class="section-label">What You Get</div>
-                <h2 class="section-title">Everything You Need to Launch</h2>
-            </div>
-            <div class="metrics-grid">
-                <div class="metric">
-                    <div class="metric-icon">⚡</div>
-                    <h4 class="metric-title">Speed Without Compromise</h4>
-                    <p class="metric-description">
-                        Ship in weeks, not months. AI accelerates development while human architects ensure quality and scalability.
-                    </p>
-                    <ul class="metric-features">
-                        <li>6-8 week delivery timeline</li>
-                        <li>Daily progress updates</li>
-                        <li>Agile sprint methodology</li>
-                    </ul>
-                </div>
-                <div class="metric">
-                    <div class="metric-icon">💎</div>
-                    <h4 class="metric-title">Production-Ready Code</h4>
-                    <p class="metric-description">
-                        Clean, tested, and documented code that's built to scale from day one. No technical debt.
-                    </p>
-                    <ul class="metric-features">
-                        <li>100% test coverage</li>
-                        <li>Comprehensive documentation</li>
-                        <li>Best practices & standards</li>
-                    </ul>
-                </div>
-                <div class="metric">
-                    <div class="metric-icon">🎯</div>
-                    <h4 class="metric-title">Equity Alignment</h4>
-                    <p class="metric-description">
-                        Small upfront fee plus equity stake means we're invested in your long-term success, not just the launch.
-                    </p>
-                    <ul class="metric-features">
-                        <li>Shared success model</li>
-                        <li>Long-term partnership</li>
-                        <li>Ongoing optimization</li>
-                    </ul>
-                </div>
-                <div class="metric">
-                    <div class="metric-icon">🚀</div>
-                    <h4 class="metric-title">Full Ownership</h4>
-                    <p class="metric-description">
-                        You own all code and IP. We provide ongoing support and knowledge transfer for your team.
-                    </p>
-                    <ul class="metric-features">
-                        <li>Complete IP ownership</li>
-                        <li>Full source code access</li>
-                        <li>Team training included</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<a class="pill float-cta" href="#start">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
 
-    <section id="contact" class="contact">
-        <div class="container">
-            <div class="contact-container">
-                <div class="contact-header">
-                    <h2>Let's Talk About Your Project</h2>
-                    <p>Tell us what you're building and we'll get back to you within 24 hours.</p>
-                </div>
-                <div class="form-wrapper">
-                    <form id="contactForm">
-                        <div class="form-group">
-                            <label for="name">Name <span class="required">*</span></label>
-                            <input type="text" id="name" name="name" required placeholder="Your full name">
-                            <div class="error-message" id="nameError">Please enter your name</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="email">Email <span class="required">*</span></label>
-                            <input type="email" id="email" name="email" required placeholder="you@company.com">
-                            <div class="error-message" id="emailError">Please enter a valid email address</div>
-                        </div>
-                        <div class="form-group">
-                            <label for="company">Company</label>
-                            <input type="text" id="company" name="company" placeholder="Your company name">
-                        </div>
-                        <div class="form-group">
-                            <label for="message">Tell us about your project <span class="required">*</span></label>
-                            <textarea id="message" name="message" required placeholder="What are you looking to build?"></textarea>
-                            <div class="error-message" id="messageError">Please describe your project</div>
-                        </div>
-                        <div class="form-submit">
-                            <button type="submit" class="btn btn-submit">
-                                <span>Send Message</span>
-                                <span>→</span>
-                            </button>
-                        </div>
-                        <div class="success-message" id="successMessage">
-                            ✓ Thank you! We'll get back to you within 24 hours.
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="footer-grid">
-                <div class="footer-brand">
-                    <h3>lidodevelopment</h3>
-                    <p>Technical co-founders as a service. Two architects leveraging AI agents to deliver production-ready applications in 6-8 weeks.</p>
-                </div>
-                <div class="footer-col">
-                    <h4>Navigation</h4>
-                    <ul>
-                        <li><a href="#work">Work</a></li>
-                        <li><a href="#process">Process</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Services</h4>
-                    <ul>
-                        <li><a href="#">Product Design</a></li>
-                        <li><a href="#">Development</a></li>
-                        <li><a href="#">AI Integration</a></li>
-                        <li><a href="#">Consulting</a></li>
-                    </ul>
-                </div>
-                <div class="footer-col">
-                    <h4>Contact</h4>
-                    <ul>
-                        <li><a href="mailto:admin@lidodevelopment.com">admin@lidodevelopment.com</a></li>
-                        <li><a href="#">Stockholm, Sweden</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <div>© 2025 lidodevelopment. All rights reserved.</div>
-            </div>
-        </div>
-    </footer>
-
-    <script src="script.js"></script>
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
