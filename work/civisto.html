@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Civisto — Invasive species — Lido Development</title>
+<meta name="description" content="Invasive species reporting for the Civisto community app — a new report category that lets citizens log sightings and route them to the people who can act." />
+<meta name="theme-color" content="#0E0E0E" />
+
+<meta property="og:type" content="website" />
+<meta property="og:title" content="Civisto — Invasive species — Lido Development" />
+<meta property="og:description" content="Invasive species reporting for the Civisto community app." />
+
+<link rel="preconnect" href="https://api.fontshare.com" />
+<link rel="preconnect" href="https://cdn.fontshare.com" crossorigin />
+<link rel="stylesheet" href="https://api.fontshare.com/v2/css?f%5B%5D=switzer@400,500,600,700&display=swap" />
+<link rel="stylesheet" href="../assets/css/styles.css" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%23C6F24E'/%3E%3Cpath d='M9 7v18h13' stroke='%230E0E0E' stroke-width='3' fill='none'/%3E%3C/svg%3E" />
+</head>
+<body class="page-inner">
+
+<div class="cursor" aria-hidden="true"><span class="cursor__dot"></span><span class="cursor__ring"></span></div>
+
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav" id="nav">
+  <div class="nav__pill">
+    <a class="logo" href="../index.html#top" aria-label="Lido Development home">Lido<span>.</span></a>
+
+    <nav class="nav__links" aria-label="Primary">
+      <a href="../index.html#process">How it works</a>
+      <a href="../work.html" aria-current="page">Work</a>
+      <a href="../team.html">Team</a>
+      <a href="../index.html#services">Services <b>05</b></a>
+      <a href="../index.html#faq">FAQ</a>
+      <a href="../index.html#contact">Contact</a>
+    </nav>
+
+    <div class="nav__right">
+      <button class="toggle" id="theme" aria-label="Switch to light theme">
+        <svg class="toggle__sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="4.5"/><path d="M12 2v2.5M12 19.5V22M2 12h2.5M19.5 12H22M4.9 4.9l1.8 1.8M17.3 17.3l1.8 1.8M19.1 4.9l-1.8 1.8M6.7 17.3l-1.8 1.8"/></svg>
+        <svg class="toggle__moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8.5 8.5 0 0 1 9.5 4a8.5 8.5 0 1 0 10.5 10.5z"/></svg>
+      </button>
+      <a class="pill" data-magnetic href="../index.html#start">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+      <button class="burger" id="burger" aria-label="Menu" aria-expanded="false"><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="drawer" id="drawer" inert>
+  <div class="drawer__top">
+    <a class="logo" href="../index.html#top" aria-label="Lido Development home">Lido<span>.</span></a>
+    <button class="drawer__close" type="button" aria-label="Close menu">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+  </div>
+  <nav class="drawer__links" aria-label="Primary">
+    <a href="../index.html#process">How it works</a>
+    <a href="../work.html" aria-current="page">Work</a>
+    <a href="../team.html">Team</a>
+    <a href="../index.html#services">Services</a>
+    <a href="../index.html#faq">FAQ</a>
+    <a href="../index.html#contact">Contact</a>
+    <a href="../index.html#start">Start a project</a>
+  </nav>
+  <div class="drawer__contact">
+    <p>Contact</p>
+    <a href="mailto:hello@lidodevelopment.com">hello@lidodevelopment.com</a>
+  </div>
+</div>
+
+<main id="main">
+  <article class="study">
+    <a class="study__back reveal" href="../work.html">&larr; All work</a>
+    <p class="study__meta reveal">2026 <i aria-hidden="true">&bull;</i> Civisto <b>new</b></p>
+    <h1 class="reveal">Invasive species reporting for the Civisto community app</h1>
+    <p class="study__chips reveal"><span>New feature</span><span>Invasive species</span><span>PWA</span><span>Capacitor</span></p>
+
+    <figure class="study__hero reveal">
+      <img src="../assets/img/civisto_app_interface.png" alt="Civisto app showing the invasive species report flow" width="1200" height="800" />
+    </figure>
+
+    <div class="study__body">
+      <section class="study__block reveal">
+        <h2>The situation</h2>
+        <p>Civisto is a Progressive Web App that lets citizens report local issues &mdash; electricity, garbage, safety, traffic and graffiti &mdash; and track them to resolution. What it couldn't capture was invasive species: knotweed pushing through a verge, signal crayfish in a stream, sightings that landowners and authorities need to act on early.</p>
+      </section>
+      <section class="study__block reveal">
+        <h2>What we did</h2>
+        <p>As Civisto's CTO-as-a-service partner we added an <em>Invasive species</em> category to the report flow &mdash; a new category chip alongside the existing ones, with photo capture, automatic location tagging and routing to the right authority. The Civisto codebase is one PWA shipped to web, Android and iOS through Capacitor, so the feature landed on every platform from a single change.</p>
+      </section>
+      <section class="study__block reveal">
+        <h2>What changed</h2>
+        <p>Communities can now log invasive species sightings the moment they spot them, alongside potholes and graffiti, and the report reaches the people who can act. Civisto keeps its momentum: planned, built and maintained by Lido Development, the holding company behind the product.</p>
+      </section>
+    </div>
+
+    <footer class="study__foot">
+      <p class="study__next">All work <a href="../work.html">&rarr;</a></p>
+      <a class="pill" data-magnetic href="../index.html#start">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+    </footer>
+  </article>
+</main>
+
+<footer class="footer" id="contact">
+  <div class="footer__panel">
+    <div class="footer__top">
+      <div class="footer__cta">
+        <h2>Do you like what you see?</h2>
+        <div class="footer__ctarow">
+          <a class="pill" data-magnetic href="mailto:hello@lidodevelopment.com">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+          <span class="rating rating--stack"><b>5.0</b> <i aria-hidden="true">&starf;&starf;&starf;&starf;&starf;</i><br />from 31 engagements</span>
+        </div>
+      </div>
+
+      <nav class="footer__col" aria-label="Learn"><h4>Learn</h4><a href="../index.html#process">How it works</a><a href="../index.html#start">Start a project</a><a href="../index.html#faq">FAQ</a></nav>
+      <nav class="footer__col" aria-label="Explore"><h4>Explore</h4><a href="../index.html#top">Home</a><a href="../work.html" aria-current="page">Work <b>new</b></a><a href="../team.html">Team</a><a href="../index.html#services">Services</a><a href="../index.html#contact">Contact</a></nav>
+
+      <div class="footer__col footer__contact">
+        <h4>Get in touch</h4>
+        <a href="tel:+441234567890">+44 1234 567 890</a>
+        <a href="mailto:hello@lidodevelopment.com">hello@lidodevelopment.com</a>
+        <p>Lido Development Ltd<br />1 Waterhouse Square<br />London EC1N 2ST</p>
+      </div>
+    </div>
+
+    <div class="wordmark"><span>Shipping since 2016</span></div>
+
+    <div class="footer__bottom">
+      <span class="logo logo--sm">Lido<span>.</span></span>
+      <p>&copy; 2026 Lido Development Ltd</p>
+      <p>Company Reg 10529058</p>
+      <p><a href="../index.html#top">Privacy</a> <a href="../index.html#top">Terms</a> <a href="../index.html#top">All rights reserved</a></p>
+    </div>
+  </div>
+</footer>
+
+<a class="pill float-cta" href="../index.html#start">Start a project <i aria-hidden="true"><svg viewBox="0 0 16 16"><path d="M4 12 12 4M6 4h6v6"/></svg></i></a>
+
+<script src="../assets/js/main.js" defer></script>
+</body>
+</html>
